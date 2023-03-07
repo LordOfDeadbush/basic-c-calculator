@@ -7,5 +7,6 @@ I am using this project in order to get better at C. The endgoal here is to be a
 ## Current goal
 The current goal of this project is to make a 4-function calculator.
 In the future we will make a scientific calculator but this is a good start.
-We will use this calculator as an example: https://www.amazon.com/Texas-Instruments-TI-108-Elementary/dp/B001F0271O
+We will use ![this](https://www.amazon.com/Texas-Instruments-TI-108-Elementary/dp/B001F0271O) calculator as an example
+
 ![image](https://user-images.githubusercontent.com/37131666/223297734-b169c2ab-71aa-41ef-9355-a7710fe3b7b4.png)
