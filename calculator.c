@@ -28,7 +28,16 @@ Has memory management (M) <- do this later
 ? NOTE: this will not follow PEMDAS rules
 */
 
-#include <stdio.h>
+#include <stdio.h> // printf, scanf
+#include <math.h> // sqrt
+
+float number_input();
+float func_input(float x);
+float mult(float x);
+float div(float x);
+float root(float x);
+float perc(float x);
+float print_result(float x);
 
 // * inputs
 float number_input() {
@@ -36,10 +45,6 @@ float number_input() {
     printf(">");
     scanf("%f", &input);
     return input;
-}
-
-float func_input() { // TODO: this is the last part for this part of the project
-    return 0;
 }
 
 // * basic operations
@@ -67,7 +72,7 @@ float div(float x) {
 // ? these operations only take the x parameter, so y is not required
 
 float root(float x) {
-    return x;
+    return sqrt(x);
 }
 
 float perc(float x) {
@@ -75,8 +80,50 @@ float perc(float x) {
 }
 
 float print_result(float x) {
-    printf("=%g",x);
+    printf("=%g\n",x);
     return x;
+}
+
+float clear() {
+    return number_input();
+}
+
+float func_input(float x) { // TODO: this is the last part for this part of the project
+    char input;
+    printf("...");
+    scanf(" %c", &input);
+    float result;
+    switch(input) {
+        case '+': 
+            result = add(x); 
+            break;
+        case '-': 
+            result = sub(x); 
+            break;
+        case '*': 
+            result = mult(x); 
+            break;
+        case '/': 
+            result = div(x); 
+            break;
+        case 'r': 
+            result = root(x); 
+            break;
+        case '%': 
+            result = perc(x); 
+            break;
+        case '=': 
+            result = print_result(x); 
+            break;
+        case 'c':
+            result = clear();
+            break;
+        default: 
+            printf("Oops! I was expecting a different input!\n");
+            result = x;
+        break;
+    }
+    return result;
 }
 
 int main() {
@@ -84,5 +131,8 @@ int main() {
 //     printf("CALCULATOR\n\nEnter your name:");
 //     scanf("%[^\n]%*c", &name);
 //     printf("Hello, %n", name);
-    print_result(number_input());
+    float x = number_input();
+    while (1) {
+        x = func_input(x);
+    }
 }
