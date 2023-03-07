@@ -44,7 +44,7 @@ float print_result(float x);
 // * inputs
 float number_input() {
     float input;
-    printf("> ");
+    printf("  > ");
     scanf("%f", &input);
     return input;
 }
