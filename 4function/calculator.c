@@ -33,13 +33,6 @@ Has memory management (M) <- do this later
 
 const char* instructions = "INSTRUCTIONS:\nif >, enter number (can use e+)\nIf ..., use an operator: \n+ - * / %% = m\nx to exit\n";
 
-float number_input();
-float func_input(float x, int *repeat);
-float mult(float x);
-float div(float x);
-float root(float x);
-float perc(float x);
-float print_result(float x);
 
 // * inputs
 float number_input() {
