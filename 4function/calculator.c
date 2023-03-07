@@ -42,7 +42,7 @@ float print_result(float x);
 // * inputs
 float number_input() {
     float input;
-    printf(">");
+    printf("> ");
     scanf("%f", &input);
     return input;
 }
@@ -90,7 +90,7 @@ float clear() {
 
 float func_input(float x) { // TODO: this is the last part for this part of the project
     char input;
-    printf("...");
+    printf("... ");
     scanf(" %c", &input);
     float result;
     switch(input) {
