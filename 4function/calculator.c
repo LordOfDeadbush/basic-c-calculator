@@ -31,6 +31,8 @@ Has memory management (M) <- do this later
 #include <stdio.h> // printf, scanf
 #include <math.h> // sqrt
 
+const char* instructions = "INSTRUCTIONS:\nif >, enter number (can use e+)\nIf ..., use an operator: \n+ - * / %% = m\nx to exit\n";
+
 float number_input();
 float func_input(float x, int *repeat);
 float mult(float x);
@@ -135,6 +137,8 @@ int main() {
 //     printf("CALCULATOR\n\nEnter your name:");
 //     scanf("%[^\n]%*c", &name);
 //     printf("Hello, %n", name);
+    printf(instructions);
+
     float x = number_input();
     int repeat = 1;
     while (repeat) {
