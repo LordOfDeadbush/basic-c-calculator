@@ -82,7 +82,7 @@ float perc(float x) {
 }
 
 float print_result(float x) {
-    printf("=%g\n",x);
+    printf("  = %g\n",x);
     return x;
 }
 
