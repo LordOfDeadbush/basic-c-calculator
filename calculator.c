@@ -31,14 +31,14 @@ Has memory management (M) <- do this later
 #include <stdio.h>
 
 // * inputs
-float number_input() { // & works
+float number_input() {
     float input;
     printf(">");
     scanf("%f", &input);
     return input;
 }
 
-float func_input() {
+float func_input() { // TODO: this is the last part for this part of the project
     return 0;
 }
 
@@ -74,7 +74,7 @@ float perc(float x) {
     return x / 100;
 }
 
-float print_result(float x) { // & works
+float print_result(float x) {
     printf("=%g",x);
     return x;
 }
