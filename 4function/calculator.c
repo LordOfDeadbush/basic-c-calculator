@@ -126,10 +126,6 @@ float func_input(float x, int *repeat) {
 }
 
 int main() {
-//     int name[100];
-//     printf("CALCULATOR\n\nEnter your name:");
-//     scanf("%[^\n]%*c", &name);
-//     printf("Hello, %n", name);
     printf(instructions);
 
     float x = number_input();
