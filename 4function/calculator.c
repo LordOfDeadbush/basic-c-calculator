@@ -32,7 +32,7 @@ Has memory management (M) <- do this later
 #include <math.h> // sqrt
 
 float number_input();
-float func_input(float x);
+float func_input(float x, int *repeat);
 float mult(float x);
 float div(float x);
 float root(float x);
@@ -88,7 +88,7 @@ float clear() {
     return number_input();
 }
 
-float func_input(float x) { // TODO: this is the last part for this part of the project
+float func_input(float x, int *repeat) {
     char input;
     printf("... ");
     scanf(" %c", &input);
@@ -118,6 +118,10 @@ float func_input(float x) { // TODO: this is the last part for this part of the 
         case 'c':
             result = clear();
             break;
+        case 'x':
+            result = x;
+            *repeat = 0;
+            break;
         default: 
             printf("Oops! I was expecting a different input!\n");
             result = x;
@@ -132,7 +136,9 @@ int main() {
 //     scanf("%[^\n]%*c", &name);
 //     printf("Hello, %n", name);
     float x = number_input();
-    while (1) {
-        x = func_input(x);
+    int repeat = 1;
+    while (repeat) {
+        x = func_input(x, &repeat);
+        // printf("%i", repeat);
     }
 }
